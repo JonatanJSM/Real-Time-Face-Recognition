@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBDV - Escáner de Bienvenida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        #video-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        #video {
+            border: 3px solid #4E2A84;
+            border-radius: 8px;
+            background: #000;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        button {
+            background: #4E2A84;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #results {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="EBDV Logo">
+                <h1>Escáner de Bienvenida</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="scanner-container">
+
+                <div class="welcome-message">
+                    <h2 id="welcome-text">¡Bienvenido/a!</h2>
+                    <p id="sub-text">Acércate a la cámara para identificarte</p>
+                </div>
+            </div>
+
+            <div id="video-container">
+                <video id="video" width="640" height="480" autoplay muted></video>
+                <canvas id="canvas" width="640" height="480"></canvas>
+            </div>
+            
+            <button id="startBtn">Iniciar Cámara</button>
+            <button id="captureBtn" disabled>Capturar Rostro</button>
+            
+            <div id="results"></div>
+
+            <div class="bible-verse">
+                <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito"</p>
+                <p class="verse">Juan 3:16</p>
+            </div>
+        </main>
+
+        <!-- Modal de Registro -->
+        <div id="register-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>¡Nuevo Asistente!</h2>
+                <p>Por favor ingresa tu nombre para registrarte:</p>
+                <input type="text" id="name-input" placeholder="Tu nombre">
+                <button id="register-btn">Registrar</button>
+                <p id="error-message" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</body>
+</html>

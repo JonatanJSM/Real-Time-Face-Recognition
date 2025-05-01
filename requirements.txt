@@ -1,0 +1,8 @@
+flask
+numpy
+opencv-python
+face_recognition
+dlib
+gtts
+pygame
+python-dotenv
