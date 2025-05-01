@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const modalText = document.getElementById("modalText");
   const registerForm = document.getElementById("registerForm");
 
+  let isDetectionActive = true; // Variable de control para la detección de rostros
+
   await faceapi.nets.tinyFaceDetector.loadFromUri('/static/models');
   status.textContent = "✅ Modelos cargados. Iniciando cámara...";
 
@@ -31,6 +33,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     faceapi.matchDimensions(canvas, displaySize);
 
     setInterval(async () => {
+      if (!isDetectionActive) return; // Detener la detección si está desactivada
+
       const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
 
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -65,6 +69,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     capturedImage.src = imageData;
     modal.style.display = "block";
 
+    isDetectionActive = false; // Detener la detección de rostros
+
     const response = await fetch("/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -79,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         modalText.innerHTML = `<h3>😕 No te reconocimos</h3><p>¿Te registras?</p>`;
         registerForm.style.display = "block";
     }
-});
+  });
 
   document.getElementById("registerBtn").addEventListener("click", async () => {
     const name = document.getElementById("regName").value;
@@ -96,5 +102,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     registerForm.style.display = "none";
   });
 
-  closeModal.onclick = () => modal.style.display = "none";
+  closeModal.onclick = () => {
+    modal.style.display = "none";
+    isDetectionActive = true; // Reactivar la detección de rostros
+  };
 });
