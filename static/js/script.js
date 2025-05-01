@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   const canvas = document.getElementById('overlay');
   const status = document.getElementById('status');
   const context = canvas.getContext('2d');
+  const overlay = document.getElementById("overlay");
+  const captureBtn = document.getElementById("captureBtn");
+  const ctx = overlay.getContext("2d");
+
+  const modal = document.getElementById("resultModal");
+  const closeModal = document.getElementById("closeModal");
+  const capturedImage = document.getElementById("capturedImage");
+  const modalText = document.getElementById("modalText");
+  const registerForm = document.getElementById("registerForm");
 
   await faceapi.nets.tinyFaceDetector.loadFromUri('/static/models');
   status.textContent = "✅ Modelos cargados. Iniciando cámara...";
@@ -45,23 +54,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     }, 200);
   });
 
-  document.getElementById('captureBtn').addEventListener('click', () => {
-    const snapshotCanvas = document.createElement('canvas');
-    snapshotCanvas.width = video.videoWidth;
-    snapshotCanvas.height = video.videoHeight;
-    const snapshotCtx = snapshotCanvas.getContext('2d');
-    snapshotCtx.drawImage(video, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
-    snapshotCanvas.toBlob(blob => {
-      const formData = new FormData();
-      formData.append('photo', blob, 'snapshot.png');
+  captureBtn.addEventListener("click", async () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0);
+    const imageData = canvas.toDataURL("image/jpeg");
 
-      fetch('/upload', {
-        method: 'POST',
-        body: formData
-      })
-        .then(res => res.text())
-        .then(data => alert("✅ Foto enviada"))
-        .catch(err => console.error(err));
-    }, 'image/png');
+    // Mostrar la imagen en el modal
+    capturedImage.src = imageData;
+    modal.style.display = "block";
+
+    const response = await fetch("/upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: imageData }),
+    });
+
+    const result = await response.json();
+    if (result.status === "known") {
+        modalText.innerHTML = `<h2>🎉 ¡Hola, ${result.name}!</h2><p>Edad: ${result.age}</p>`;
+        registerForm.style.display = "none";
+    } else {
+        modalText.innerHTML = `<h3>😕 No te reconocimos</h3><p>¿Te registras?</p>`;
+        registerForm.style.display = "block";
+    }
+});
+
+  document.getElementById("registerBtn").addEventListener("click", async () => {
+    const name = document.getElementById("regName").value;
+    const age = document.getElementById("regAge").value;
+
+    const res = await fetch("/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, age })
+    });
+
+    const data = await res.json();
+    modalText.innerHTML = `<h2>🎉 ¡Bienvenido, ${data.name}!</h2>`;
+    registerForm.style.display = "none";
   });
+
+  closeModal.onclick = () => modal.style.display = "none";
 });

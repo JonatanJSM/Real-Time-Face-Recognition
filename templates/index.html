@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
   <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -18,5 +19,17 @@
     <p id="status">🟡 Cargando modelos...</p>
     <button id="captureBtn">📸 Tomar Foto</button>
   </div>
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="capturedImage" src="" alt="Captura">
+        <div id="modalText"></div>
+        <div id="registerForm" style="display:none;">
+            <input type="text" id="regName" placeholder="Nombre">
+            <input type="number" id="regAge" placeholder="Edad">
+            <button id="registerBtn">Registrar</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
