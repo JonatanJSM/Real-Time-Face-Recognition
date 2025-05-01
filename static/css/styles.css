@@ -1,215 +1,59 @@
-:root {
-    --primary: #6a3093;
-    --secondary: #f7b733;
-    --accent: #4abdac;
-    --dark: #2c3e50;
-    --light: #ecf0f1;
-    --success: #2ecc71;
-    --error: #e74c3c;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: var(--dark);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.logo img {
-    height: 80px;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary);
-    font-size: 2.5rem;
+  color: #4E2A84;
+  margin-bottom: 20px;
 }
 
-.scanner-container {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
-    text-align: center;
+.video-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-.video-feed {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+#video, #overlay {
+  border-radius: 10px;
 }
 
-.video-feed img {
-    width: 100%;
-    display: block;
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.welcome-message {
-    margin: 20px 0;
+#status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4E2A84;
 }
 
-#welcome-text {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 10px;
+button {
+  margin-top: 20px;
+  background: #4E2A84;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#sub-text {
-    font-size: 1.2rem;
-    color: var(--dark);
-}
-
-.bible-verse {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    font-style: italic;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.bible-verse p {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.verse {
-    font-weight: bold;
-    color: var(--primary);
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    animation: modalFadeIn 0.3s;
-}
-
-@keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--dark);
-}
-
-.modal h2 {
-    color: var(--primary);
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.modal p {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#name-input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border 0.3s;
-}
-
-#name-input:focus {
-    border-color: var(--primary);
-    outline: none;
-}
-
-#register-btn {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%;
-}
-
-#register-btn:hover {
-    background: #5a1d7a;
-}
-
-.error {
-    color: var(--error);
-    margin-top: 10px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    .logo {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    #welcome-text {
-        font-size: 2rem;
-    }
+button:hover {
+  background: #6A40B7;
 }
