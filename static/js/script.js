@@ -1,3 +1,5 @@
+let lastCapturedImage = null;
+
 document.addEventListener('DOMContentLoaded', async () => {
   const video = document.getElementById('video');
   const canvas = document.getElementById('overlay');
@@ -13,8 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const modalText = document.getElementById("modalText");
   const registerForm = document.getElementById("registerForm");
 
-  let isDetectionActive = true; // Variable de control para la detección de rostros
+  let isDetectionActive = true;
 
+  // Cargar modelos
   await faceapi.nets.tinyFaceDetector.loadFromUri('/static/models');
   status.textContent = "✅ Modelos cargados. Iniciando cámara...";
 
@@ -33,17 +36,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     faceapi.matchDimensions(canvas, displaySize);
 
     setInterval(async () => {
-      if (!isDetectionActive) return; // Detener la detección si está desactivada
+      if (!isDetectionActive) return;
 
       const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions());
-
       context.clearRect(0, 0, canvas.width, canvas.height);
 
       if (detections.length > 0) {
         status.textContent = "🟢 Rostro detectado";
         const resizedDetections = faceapi.resizeResults(detections, displaySize);
 
-        // Dibujar rectángulo rojo
         resizedDetections.forEach(detection => {
           const { x, y, width, height } = detection.box;
           context.beginPath();
@@ -65,25 +66,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     canvas.getContext("2d").drawImage(video, 0, 0);
     const imageData = canvas.toDataURL("image/jpeg");
 
+    // Guardar imagen globalmente para usarla en el registro
+    lastCapturedImage = imageData;
+
     // Mostrar la imagen en el modal
     capturedImage.src = imageData;
     modal.style.display = "block";
 
-    isDetectionActive = false; // Detener la detección de rostros
+    isDetectionActive = false;
 
     const response = await fetch("/upload", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: imageData }),
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ image: imageData }),
     });
 
     const result = await response.json();
     if (result.status === "known") {
-        modalText.innerHTML = `<h2>🎉 ¡Hola, ${result.name}!</h2><p>Edad: ${result.age}</p>`;
-        registerForm.style.display = "none";
+      modalText.innerHTML = `<h2>🎉 ¡Hola, ${result.name}!</h2><p>Edad: ${result.age}</p>`;
+      registerForm.style.display = "none";
     } else {
-        modalText.innerHTML = `<h3>😕 No te reconocimos</h3><p>¿Te registras?</p>`;
-        registerForm.style.display = "block";
+      modalText.innerHTML = `<h3>😕 No te reconocimos</h3><p>¿Te registras?</p>`;
+      registerForm.style.display = "block";
     }
   });
 
@@ -91,10 +95,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const name = document.getElementById("regName").value;
     const age = document.getElementById("regAge").value;
 
+    if (!lastCapturedImage) {
+      alert("No se ha capturado ninguna imagen.");
+      return;
+    }
+
     const res = await fetch("/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, age })
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, age, image: lastCapturedImage })
     });
 
     const data = await res.json();
@@ -104,6 +113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   closeModal.onclick = () => {
     modal.style.display = "none";
-    isDetectionActive = true; // Reactivar la detección de rostros
+    isDetectionActive = true;
   };
 });
+
