@@ -8,40 +8,12 @@ const grupos = [
 
 // Coordenadas de cada moneda (ajusta según la imagen)
 const posiciones = [
-  { x: 640, y: 497 },
-  { x: 724, y: 488 },
-  { x: 731, y: 376 },
-  { x: 772, y: 298 },
-  { x: 793, y: 290 },
-  { x: 865, y: 318 },
-  { x: 874, y: 402 },
-  { x: 876, y: 473 },
-  { x: 933, y: 504 },
-  { x: 1010, y: 502 },
-  { x: 1074, y: 501 },
-  { x: 1111, y: 476 },
-  { x: 1116, y: 410 },
-  { x: 1069, y: 354 },
-  { x: 1004, y: 294 },
-  { x: 948, y: 236 },
-  { x: 917, y: 201 },
-  { x: 663, y: 190 },
-  { x: 632, y: 226 },
-  { x: 571, y: 207 },
-  { x: 552, y: 139 },
-  { x: 492, y: 112 },
-  { x: 461, y: 182 },
-  { x: 460, y: 245 },
-  { x: 468, y: 300 },
-  { x: 529, y: 319 },
-  { x: 572, y: 318 },
-  { x: 620, y: 352 },
-  { x: 621, y: 396 },
-  { x: 570, y: 421 },
-  { x: 487, y: 429 },
-  { x: 469, y: 464 },
-  { x: 502, y: 501 },
-  { x: 545, y: 503 },
+  { x: 615, y: 489 },
+  { x: 685, y: 489 },
+  { x: 715, y: 439 },
+  { x: 715, y: 385 },
+  { x: 720, y: 333 },
+
 ];
 
 const auto = document.getElementById("auto");
@@ -55,7 +27,7 @@ let grupoActual = 0;
 function dibujarMonedas() {
   posiciones.forEach(pos => {
     const moneda = document.createElement("img");
-    moneda.src = "moneda.png";
+    moneda.src = "coin_1.png";
     moneda.classList.add("moneda");
     moneda.style.left = pos.x + "px";
     moneda.style.top = pos.y + "px";
