@@ -1,5 +1,5 @@
 const grupos = [
-  { nombre: "Grupo 1", monedas: 4 },
+  { nombre: "Grupo 1", monedas: 30 },
   { nombre: "Grupo 2", monedas: 6 },
   { nombre: "Grupo 3", monedas: 9 },
   { nombre: "Grupo 4", monedas: 11 },
@@ -8,34 +8,34 @@ const grupos = [
 
 // Coordenadas de cada moneda (ajusta según la imagen)
 const posiciones = [
-  { x: 615, y: 489 },
+  { x: 615, y: 489, angulo: 0 },
   { x: 685, y: 489 },
-  { x: 715, y: 439 },
-  { x: 715, y: 385 },
+  { x: 715, y: 439, angulo: -45 },
+  { x: 715, y: 385, angulo: -90 },
   { x: 720, y: 333 },
-  { x: 755, y: 280 },
-  { x: 832, y: 280 },
-  { x: 863, y: 335},
-  { x: 863, y: 385 },
+  { x: 755, y: 280, angulo: -68},
+  { x: 832, y: 280, angulo: -35 },
+  { x: 863, y: 335, angulo: 37},
+  { x: 863, y: 385, angulo: 90 },
   { x: 863, y: 439 },
-  { x: 875, y: 489 },
-  { x: 930, y: 489 },
+  { x: 875, y: 489, angulo: 65 },
+  { x: 930, y: 489, angulo: 0 },
   { x: 985, y: 489 },
   { x: 1045, y: 489 },
-  { x: 1100, y: 460 },
-  { x: 1110, y: 417 },
-  { x: 1084, y: 372 },
-  { x: 1040, y: 329 },
+  { x: 1100, y: 460, angulo: -45 },
+  { x: 1110, y: 417, angulo: -65 },
+  { x: 1084, y: 372, angulo: -102 },
+  { x: 1040, y: 329, angulo: -130  },
   { x: 996, y: 288 },
   { x: 946, y: 237 },
   { x: 896, y: 187 },
   { x: 852, y: 141 },
   { x: 808, y: 104 },
-  { x: 747, y: 93 },
+  { x: 747, y: 93, angulo: -180 },
   { x: 693, y: 91 },
-  { x: 651, y: 134 },
-  { x: 645, y: 188 },
-  { x: 617, y: 216 },
+  { x: 651, y: 134, angulo:-214 },
+  { x: 645, y: 188, angulo: -250 },
+  { x: 617, y: 216, angulo: -200},
   { x: 552, y: 189 },
   { x: 545, y: 126 },
   { x: 480, y: 97 },
@@ -50,8 +50,6 @@ const posiciones = [
   { x: 450, y: 443 },
   { x: 495, y: 489 },
   { x: 567, y: 489 },
-  
-
 ];
 
 const auto = document.getElementById("auto");
@@ -80,8 +78,18 @@ function moverAuto(grupoIndex) {
   const recorrido = posiciones.slice(0, cantidad);
 
   let tl = gsap.timeline();
+  let anguloActual = 0; // Se mantiene hasta que se actualice
 
-  recorrido.forEach((pos, i) => {
+  recorrido.forEach((pos) => {
+    if (typeof pos.angulo === "number") {
+      anguloActual = pos.angulo;
+      tl.to(auto, {
+        duration: 0.2,
+        rotate: anguloActual,
+        ease: "none"
+      });
+    }
+
     tl.to(auto, {
       duration: 0.8,
       left: pos.x + "px",
@@ -96,6 +104,7 @@ function moverAuto(grupoIndex) {
     mensaje.style.display = "block";
   });
 }
+
 
 // Cerrar mensaje y avanzar al siguiente grupo
 function cerrarMensaje() {
