@@ -1,12 +1,11 @@
 const grupos = [
-  { nombre: "Grupo 1", monedas: 45 },
+  { nombre: "Inicio", monedas: 0 },
   { nombre: "Grupo 2", monedas: 6 },
   { nombre: "Grupo 3", monedas: 9 },
   { nombre: "Grupo 4", monedas: 11 },
   { nombre: "Grupo 5", monedas: 12 }
 ];
 
-// Coordenadas de cada moneda (ajusta según la imagen)
 const posiciones = [
   { x: 615, y: 489, angulo: 0 },
   { x: 685, y: 489 },
@@ -56,8 +55,12 @@ const auto = document.getElementById("auto");
 const mensaje = document.getElementById("mensaje");
 const mensajeTexto = document.getElementById("mensaje-texto");
 const monedasContainer = document.getElementById("monedas-container");
+const contadorMonedas = document.getElementById("contador-monedas");
+const sonidoMoneda = document.getElementById("coin-sound");
 
 let grupoActual = 0;
+let totalMonedas = 0;
+const monedasDOM = [];
 
 // Dibujar monedas en pantalla
 function dibujarMonedas() {
@@ -68,6 +71,7 @@ function dibujarMonedas() {
     moneda.style.left = pos.x + "px";
     moneda.style.top = pos.y + "px";
     monedasContainer.appendChild(moneda);
+    monedasDOM.push(moneda);
   });
 }
 
@@ -78,9 +82,9 @@ function moverAuto(grupoIndex) {
   const recorrido = posiciones.slice(0, cantidad);
 
   let tl = gsap.timeline();
-  let anguloActual = 0; // Se mantiene hasta que se actualice
+  let anguloActual = 0;
 
-  recorrido.forEach((pos) => {
+  recorrido.forEach((pos, i) => {
     if (typeof pos.angulo === "number") {
       anguloActual = pos.angulo;
       tl.to(auto, {
@@ -91,10 +95,20 @@ function moverAuto(grupoIndex) {
     }
 
     tl.to(auto, {
-      duration: 0.8,
+      duration: 0.5,
       left: pos.x + "px",
       top: pos.y + "px",
-      ease: "power1.inOut"
+      ease: "power1.inOut",
+      onComplete: () => {
+        const moneda = monedasDOM[i];
+        if (moneda) {
+          moneda.style.display = "none"; // ocultar moneda
+        }
+        sonidoMoneda.currentTime = 0;
+        sonidoMoneda.play();
+        totalMonedas++;
+        contadorMonedas.textContent = `Monedas: ${totalMonedas}`;
+      }
     });
   });
 
@@ -105,7 +119,6 @@ function moverAuto(grupoIndex) {
   });
 }
 
-
 // Cerrar mensaje y avanzar al siguiente grupo
 function cerrarMensaje() {
   mensaje.classList.add("oculto");
@@ -113,6 +126,15 @@ function cerrarMensaje() {
   grupoActual++;
 
   if (grupoActual < grupos.length) {
+    // Reiniciar monedas visibles
+    monedasDOM.forEach(moneda => {
+      moneda.style.display = "block";
+    });
+
+    // Reiniciar contador
+    totalMonedas = 0;
+    contadorMonedas.textContent = `Monedas: ${totalMonedas}`;
+
     moverAuto(grupoActual);
   }
 }

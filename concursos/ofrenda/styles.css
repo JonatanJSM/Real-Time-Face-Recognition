@@ -46,3 +46,17 @@ body {
 .oculto {
   display: none;
 }
+
+#contador-monedas {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
