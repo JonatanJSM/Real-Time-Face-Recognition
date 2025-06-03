@@ -1,13 +1,48 @@
 from flask import Flask, render_template, jsonify, request
 import face_recognition
 import numpy as np
-import os, base64, uuid
+import os, base64, uuid, psycopg2
 
 app = Flask(__name__, static_folder='static')
 
-# Directorio donde se guardarán las imágenes y los archivos con las codificaciones de rostros
+# Directorio donde se guardarán las imágenes y los archivos con las codificaciones de rostros. Además la DB
 ENCODINGS_DIR = "known_faces"
 os.makedirs(ENCODINGS_DIR, exist_ok=True)
+DB_CONFIG = {
+    'dbname': "faces_db",
+    'user': "admin",
+    'password': "admin123",
+    'host': "localhost",
+    'port': "5432"
+}
+
+# Conexión a la base de datos PostgreSQL
+def get_db_conn():
+    """Conecta a la base de datos PostgreSQL y devuelve el objeto de conexión"""
+    try:
+        conn = psycopg2.connect(**DB_CONFIG)
+        return conn
+    except Exception as e:
+        print(f"Error al conectar a la base de datos: {e}")
+        return None
+    
+# Crear tabla si no existe
+def init_db():
+    conn = get_db_conn()
+    cur = conn.cursor()
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS faces (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        age INT NOT NULL,
+        encoding BYTEA NOT NULL
+    );
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
+
+init_db()
 
 # Función para guardar una imagen base64 como un archivo en el servidor
 def save_image_from_base64(image_data, filename):
@@ -21,9 +56,7 @@ def encode_face_from_file(filepath):
     """Genera una codificación facial a partir de una imagen"""
     image = face_recognition.load_image_file(filepath)
     encodings = face_recognition.face_encodings(image)
-    if encodings:
-        return encodings[0]  # Devuelve la primera codificación encontrada
-    return None
+    return encodings[0] if encodings else None
 
 # Función para cargar todos los rostros registrados y sus codificaciones
 def load_known_faces():

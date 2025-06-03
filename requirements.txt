@@ -6,3 +6,4 @@ dlib
 gtts
 pygame
 python-dotenv
+psycopg2-binary
