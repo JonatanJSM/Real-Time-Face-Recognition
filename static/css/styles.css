@@ -182,3 +182,10 @@ button:hover {
   z-index: 10;
   pointer-events: none;
 }
+
+.welcome-heading {
+  color: #ffc107;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}

@@ -135,7 +135,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const result = await response.json();
     if (result.status === "known") {
-      modalText.innerHTML = `<h2>🎉 ¡Hola, ${result.name}!</h2><p>Edad: ${result.age}</p>`;
+      modalText.innerHTML = `<h2 class="welcome-heading">🎉 ¡Hola, ${result.name}!</h2><p>Edad: ${result.age}</p>`;
+    gsap.fromTo(".welcome-heading", 
+      { scale: 0, rotation: -720, opacity: 0 },
+      { 
+        scale: 1,
+        rotation: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "back.out(1.7)"
+      }
+    );
+
       registerForm.style.display = "none";
     } else {
       modalText.innerHTML = `<h3>😕 No te reconocimos</h3><p>¿Te registras?</p>`;
