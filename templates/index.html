@@ -8,6 +8,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
   <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -23,7 +24,10 @@
     <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>
         <img id="capturedImage" src="" alt="Captura">
+        <div id="floatingFrame"></div>
+        <div id="imageEffectOverlay"></div>
         <div id="modalText"></div>
+        <div id="dailyVerse" class="verse"></div>
         <div id="registerForm" style="display:none;">
             <input type="text" id="regName" placeholder="Nombre">
             <input type="number" id="regAge" placeholder="Edad">
