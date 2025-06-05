@@ -348,7 +348,7 @@ var sonidoInicio = new Audio();
 sonidoInicio.src="mp3/inicio.wav";
 
 var sonidoTimer = new Audio();
-sonidoTimer.src="mp3/Timer.mp3";
+sonidoTimer.src="mp3/timer2.mp3";
 
 
 //Apellidos
