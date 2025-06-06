@@ -1,6 +1,6 @@
 const grupos = [
   { nombre: "Inicio", monedas: 0 },
-  { nombre: "Grupo 2", monedas: 6 },
+  { nombre: "Grupo 2", monedas: 40 },
   { nombre: "Grupo 3", monedas: 9 },
   { nombre: "Grupo 4", monedas: 11 },
   { nombre: "Grupo 5", monedas: 12 }
@@ -66,7 +66,7 @@ const monedasDOM = [];
 function dibujarMonedas() {
   posiciones.forEach(pos => {
     const moneda = document.createElement("img");
-    moneda.src = "coin_1.png";
+    moneda.src = "ninios1.png";
     moneda.classList.add("moneda");
     moneda.style.left = pos.x + "px";
     moneda.style.top = pos.y + "px";
@@ -107,13 +107,13 @@ function moverAuto(grupoIndex) {
         sonidoMoneda.currentTime = 0;
         sonidoMoneda.play();
         totalMonedas++;
-        contadorMonedas.textContent = `Monedas: ${totalMonedas}`;
+        contadorMonedas.textContent = `Invitados: ${totalMonedas}`;
       }
     });
   });
 
   tl.call(() => {
-    mensajeTexto.innerText = `${grupo.nombre} recolectó ${grupo.monedas} monedas 🎉`;
+    mensajeTexto.innerText = `${grupo.nombre} invitó ${grupo.monedas} amigos 🎉`;
     mensaje.classList.remove("oculto");
     mensaje.style.display = "block";
   });
@@ -133,7 +133,7 @@ function cerrarMensaje() {
 
     // Reiniciar contador
     totalMonedas = 0;
-    contadorMonedas.textContent = `Monedas: ${totalMonedas}`;
+    contadorMonedas.textContent = `Invitados: ${totalMonedas}`;
 
     moverAuto(grupoActual);
   }
