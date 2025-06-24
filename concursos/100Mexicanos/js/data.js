@@ -277,7 +277,7 @@
 				{respuestaCinco: "Moisés", puntuacionCinco: 3}
 			]
 		},
-								{
+		{
 			titulo: "Menciona una milagro de Jesús",
 			tipo: "normal",
 			respuestas: [
@@ -286,6 +286,63 @@
 				{respuestaTres: "Sanar enfermos", puntuacionTres: 12},
 				{respuestaCuatro: "Resucitar a Lázaro", puntuacionCuatro: 10},
 				{respuestaCinco: "Liberar endemoniados", puntuacionCinco: 5}
+			]
+		},
+		{
+			titulo: "En qué se desempeña más un Explorador del Rey en un grupo de alabanza",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Guitarra", puntuacionUno: 37},
+				{respuestaDos: "Vocalista", puntuacionDos: 29},
+				{respuestaTres: "Batería", puntuacionTres: 18},
+				{respuestaCuatro: "Teclado", puntuacionCuatro: 10},
+				{respuestaCinco: "Bajo", puntuacionCinco: 6}
+			]
+		},
+		{
+			titulo: "Qué actividades son las más esperadas en el año",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Campamentos", puntuacionUno: 61},
+				{respuestaDos: "Premios de avance", puntuacionDos: 19},
+				{respuestaTres: "Semana del explorador", puntuacionTres: 10},
+				{respuestaCuatro: "Aniversario del destacamento", puntuacionCuatro: 9},
+				{respuestaCinco: "Entrega de reconocimientos", puntuacionCinco: 1}
+			]
+		}
+		,
+		{
+			titulo: "Qué debe hacer un explorador en la sociedad",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Evangelizar", puntuacionUno: 60},
+				{respuestaDos: "Ayudar en la comunidad", puntuacionDos: 15},
+				{respuestaTres: "Dar consejos", puntuacionTres: 14},
+				{respuestaCuatro: "Cuidar calles y parques", puntuacionCuatro: 10},
+				{respuestaCinco: "Obedecer", puntuacionCinco: 1}
+			]
+		},
+		{
+			titulo: "Qué lleva un explorador en su mochila cuando va a la reunión semanal",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Biblia", puntuacionUno: 48},
+				{respuestaDos: "Libretas", puntuacionDos: 26},
+				{respuestaTres: "Agua/comida", puntuacionTres: 12},
+				{respuestaCuatro: "Balón", puntuacionCuatro: 9},
+				{respuestaCinco: "Ropa extra", puntuacionCinco: 5}
+			]
+		}
+		,
+		{
+			titulo: "Frases que repiten los Exploradores del Rey",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Cómo está la moral", puntuacionUno: 48},
+				{respuestaDos: "Dios es bueno", puntuacionDos: 26},
+				{respuestaTres: "Silencio", puntuacionTres: 12},
+				{respuestaCuatro: "Ya me voy a aprender la consigna", puntuacionCuatro: 9},
+				{respuestaCinco: "¡Sí señor!", puntuacionCinco: 5}
 			]
 		}
 	]
