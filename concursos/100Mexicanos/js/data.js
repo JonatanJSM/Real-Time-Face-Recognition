@@ -160,178 +160,134 @@
 			titulo: "¿Qué pierdes normalmente en un campamento?",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Calcetines", puntuacionUno: 33},
+				{respuestaDos: "Toalla para secarse", puntuacionDos: 27},
+				{respuestaTres: "Herramientas", puntuacionTres: 20},
+				{respuestaCuatro: "Botellas de agua", puntuacionCuatro: 13},
+				{respuestaCinco: "Ropa", puntuacionCinco: 7}
 			]
 		},
 				{
-			titulo: "Menciona una prenda del uniforme de los Exploradores del Rey",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona una tarea que nadie quiere hacer en el campamento",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-						{
-			titulo: "Menciona un personaje bíblico del antiguo testamento",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
-			titulo: "Menciona una razón por la que no iriías a un campamento",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
-			titulo: "Menciona un tipo de nudo",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
-			titulo: "Menciona un punto dorado",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
-			titulo: "Menciona un objeto que pierdes normalmente en un campamento",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
-			titulo: "Menciona una frase que repiten los exploraotres del rey",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-								{
 			titulo: "Menciona uno de los 10 mandamientos",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "No robarás", puntuacionUno: 37},
+				{respuestaDos: "No matas", puntuacionDos: 20},
+				{respuestaTres: "No tendrás Dioses ajenos", puntuacionTres: 15},
+				{respuestaCuatro: "Honra a tu padre y a tu madre", puntuacionCuatro: 8},
+				{respuestaCinco: "Amarás a tu señor dios", puntuacionCinco: 3}
+			]
+		},
+				{
+			titulo: "Algo que haces en vez de dormir en un campamento",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Platicas", puntuacionUno: 64},
+				{respuestaDos: "Jugar", puntuacionDos: 14},
+				{respuestaTres: "Orar", puntuacionTres: 10},
+				{respuestaCuatro: "Ayunar", puntuacionCuatro: 8},
+				{respuestaCinco: "Guardia", puntuacionCinco: 4}
+			]
+		},
+						{
+			titulo: "¿Qué objeto es obligatorio llevar a un campamento?",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Biblia", puntuacionUno: 59},
+				{respuestaDos: "Casa de campaña", puntuacionDos: 17},
+				{respuestaTres: "Lampara", puntuacionTres: 12},
+				{respuestaCuatro: "Platos", puntuacionCuatro: 10},
+				{respuestaCinco: "Gorras", puntuacionCinco: 5}
 			]
 		},
 								{
-			titulo: "Menciona algo que haces en vez de dormir en un campamento",
+			titulo: "Alimento o bebida que no debe faltar en un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Agua", puntuacionUno: 62},
+				{respuestaDos: "Coca cola", puntuacionDos: 20},
+				{respuestaTres: "Café", puntuacionTres: 9},
+				{respuestaCuatro: "Horchata", puntuacionCuatro: 6},
+				{respuestaCinco: "Huevo", puntuacionCinco: 3}
 			]
 		},
 								{
-			titulo: "Menciona una actitud que admires de un líder de Exploradores del Rey",
+			titulo: "Algo importante que deben hacer siempre los Exploradores del Rey",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Orar", puntuacionUno: 64},
+				{respuestaDos: "Gritar la moral", puntuacionDos: 14},
+				{respuestaTres: "Campamentos", puntuacionTres: 10},
+				{respuestaCuatro: "Buscar a Dios", puntuacionCuatro: 8},
+				{respuestaCinco: "Devocional", puntuacionCinco: 4}
 			]
 		},
 								{
-			titulo: "Menciona una comida que llevas a un campamento",
+			titulo: "Animal o insecto que puedes ver en un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Arañas", puntuacionUno: 50},
+				{respuestaDos: "Serpientes", puntuacionDos: 20},
+				{respuestaTres: "Lagartijas", puntuacionTres: 15},
+				{respuestaCuatro: "Moscos", puntuacionCuatro: 10},
+				{respuestaCinco: "Pájaros", puntuacionCinco: 5}
 			]
 		},
 								{
-			titulo: "Menciona una actividad que puedes hacer frente a una fogata",
+			titulo: "Menciona un premio de avance",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Fogatas", puntuacionUno: 64},
+				{respuestaDos: "Herramientas", puntuacionDos: 14},
+				{respuestaTres: "Tiro con arco", puntuacionTres: 10},
+				{respuestaCuatro: "Caminata", puntuacionCuatro: 8},
+				{respuestaCinco: "Administración", puntuacionCinco: 4}
 			]
 		},
 								{
-			titulo: "Menciona algo importante que deben hacer siempre los Exploradores del Rey",
+			titulo: "Algo que dice tu mamá cuando vuelves de un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "¿Cómo te fue?", puntuacionUno: 40},
+				{respuestaDos: "Lava tu ropa", puntuacionDos: 38},
+				{respuestaTres: "Qué bueno que todo salió bien", puntuacionTres: 11},
+				{respuestaCuatro: "Andas todo suci@", puntuacionCuatro: 8},
+				{respuestaCinco: "Trajiste una sarten", puntuacionCinco: 3}
 			]
 		},
 								{
-			titulo: "Menciona un animal o insecto que puedes ver en un campamento",
+			titulo: "Menciona por qué llegas tarde a una reunión de Exploradores del Rey",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Me dormí", puntuacionUno: 33},
+				{respuestaDos: "Tráfico", puntuacionDos: 23},
+				{respuestaTres: "No me llevaron mis papás", puntuacionTres: 19},
+				{respuestaCuatro: "El camión", puntuacionCuatro: 14},
+				{respuestaCinco: "Estaba caro el Uber", puntuacionCinco: 11}
 			]
 		},
+								{
+			titulo: "Personajes de la Biblia además de Jesús",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Pablo", puntuacionUno: 62},
+				{respuestaDos: "Pedro", puntuacionDos: 20},
+				{respuestaTres: "Juan", puntuacionTres: 9},
+				{respuestaCuatro: "David", puntuacionCuatro: 6},
+				{respuestaCinco: "Moisés", puntuacionCinco: 3}
+			]
+		},
+								{
+			titulo: "Menciona una milagro de Jesús",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Convertir el agua en vino", puntuacionUno: 59},
+				{respuestaDos: "Multiplicar los panes y los pescados", puntuacionDos: 17},
+				{respuestaTres: "Sanar enfermos", puntuacionTres: 12},
+				{respuestaCuatro: "Resucitar a Lázaro", puntuacionCuatro: 10},
+				{respuestaCinco: "Liberar endemoniados", puntuacionCinco: 5}
+			]
+		}
 	]
 		
 
