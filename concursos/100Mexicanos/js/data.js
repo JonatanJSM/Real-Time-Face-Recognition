@@ -3,161 +3,161 @@
 	
 	const preguntas = [
 		{
+			titulo: "Punto del emblema que es más popular",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Alerta", puntuacionUno: 39},
+				{respuestaDos: "Físico", puntuacionDos: 23},
+				{respuestaTres: "Espiritual", puntuacionTres: 18},
+				{respuestaCuatro: "Mental", puntuacionCuatro: 13},
+				{respuestaCinco: "Limpio", puntuacionCinco: 7}
+			]
+		},
+		{
+			titulo: "Qué anima a un destacamento",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Servir a Dios", puntuacionUno: 49},
+				{respuestaDos: "Invitar amigos", puntuacionDos: 25},
+				{respuestaTres: "Ganar premios de avance", puntuacionTres: 15},
+				{respuestaCuatro: "Asistir a todos los servicios", puntuacionCuatro: 6},
+				{respuestaCinco: "Que más niños se integren", puntuacionCinco: 5}
+			]
+		},
+		{
+			titulo: "Qué es lo que más disfrutas de un campamento",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Convivencia", puntuacionUno: 53},
+				{respuestaDos: "La naturaleza", puntuacionDos: 18},
+				{respuestaTres: "La fogata", puntuacionTres: 12},
+				{respuestaCuatro: "Cursos y juegos", puntuacionCuatro: 10},
+				{respuestaCinco: "La comida", puntuacionCinco: 7}
+			]
+		},
+		{
+			titulo: "Qué actividades hacen más en tu destacamento durante un campamento",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Fogata", puntuacionUno: 38},
+				{respuestaDos: "Competencias", puntuacionDos: 30},
+				{respuestaTres: "Jugar", puntuacionTres: 15},
+				{respuestaCuatro: "Comer", puntuacionCuatro: 10},
+				{respuestaCinco: "Contar anéctodas", puntuacionCinco: 7}
+			]
+		},
+				{
+			titulo: "Qué herramientas llevas a un campamento para cortar",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Navaja", puntuacionUno: 61},
+				{respuestaDos: "cuchillo", puntuacionDos: 19},
+				{respuestaTres: "Hacha", puntuacionTres: 9},
+				{respuestaCuatro: "Machete", puntuacionCuatro: 8},
+				{respuestaCinco: "Cierra", puntuacionCinco: 3}
+			]
+		},
+				{
+			titulo: "Durante un campamento, en dónde es más común dormir",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Casa de campaña", puntuacionUno: 41},
+				{respuestaDos: "Bolsa para dormir", puntuacionDos: 29},
+				{respuestaTres: "Hamaca", puntuacionTres: 13},
+				{respuestaCuatro: "Colchón", puntuacionCuatro: 10},
+				{respuestaCinco: "Sobre el pasto", puntuacionCinco: 7}
+			]
+		},
+				{
+			titulo: "Qué compran más los exploradores",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Parches", puntuacionUno: 62},
+				{respuestaDos: "Gorras", puntuacionDos: 12},
+				{respuestaTres: "Playeras", puntuacionTres: 10},
+				{respuestaCuatro: "Herramientas", puntuacionCuatro: 9},
+				{respuestaCinco: "Recuerdos", puntuacionCinco: 7}
+			]
+		},
+				{
 			titulo: "Nombre de un animal que se menciona en el manual de Navegantes",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Inglés", puntuacionUno: 40},
-				{respuestaDos: "Chino mandarín", puntuacionDos: 30},
-				{respuestaTres: "Español", puntuacionTres: 20},
-				{respuestaCuatro: "Hindú", puntuacionCuatro: 5},
-				{respuestaCinco: "Árabe", puntuacionCinco: 5}
+				{respuestaUno: "Castor", puntuacionUno: 64},
+				{respuestaDos: "León", puntuacionDos: 14},
+				{respuestaTres: "Serpiente", puntuacionTres: 10},
+				{respuestaCuatro: "Pantera", puntuacionCuatro: 8},
+				{respuestaCinco: "Mapache", puntuacionCinco: 4}
 			]
 		},
-		{
-			titulo: "Menciona un color del Emblema",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Brasil", puntuacionUno: 50},
-				{respuestaDos: "Vietnam", puntuacionDos: 25},
-				{respuestaTres: "Colombia", puntuacionTres: 15},
-				{respuestaCuatro: "Indonesia", puntuacionCuatro: 7},
-				{respuestaCinco: "Etiopía", puntuacionCinco: 3}
-			]
-		},
-		{
-			titulo: "Menciona un premio de avance o destreza",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-		{
+				{
 			titulo: "Menciona un punto azul",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Alerta", puntuacionUno: 59},
+				{respuestaDos: "Limpio", puntuacionDos: 17},
+				{respuestaTres: "Espiritual", puntuacionTres: 12},
+				{respuestaCuatro: "Valiente", puntuacionCuatro: 10},
+				{respuestaCinco: "Honrado", puntuacionCinco: 5}
 			]
 		},
 				{
-			titulo: "Menciona un objeto que no puede faltar en un campamento",
+			titulo: "Elementos u objetos que se utilizan en la ceremonia de colores",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Bandera de Exploradores", puntuacionUno: 33},
+				{respuestaDos: "Velas", puntuacionDos: 23},
+				{respuestaTres: "Biblias", puntuacionTres: 19},
+				{respuestaCuatro: "Bandera cristiana", puntuacionCuatro: 14},
+				{respuestaCinco: "Lonas", puntuacionCinco: 11}
 			]
 		},
 				{
-			titulo: "Menciona el nombre de una fogata",
+			titulo: "Menciona un libro de la Biblia más conocido por los Exploradores del Rey",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Salmos", puntuacionUno: 40},
+				{respuestaDos: "Génesis", puntuacionDos: 38},
+				{respuestaTres: "Apocalipsis", puntuacionTres: 11},
+				{respuestaCuatro: "Juan", puntuacionCuatro: 8},
+				{respuestaCinco: "Exodo", puntuacionCinco: 3}
 			]
 		},
 				{
-			titulo: "Menciona un elemento u objeto utilizado en la ceremonio de colores",
+			titulo: "Prenda del uniforme de los Exploradores del Rey",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Chaleco", puntuacionUno: 62},
+				{respuestaDos: "Camisa utilitaria", puntuacionDos: 20},
+				{respuestaTres: "Corbata bolo", puntuacionTres: 9},
+				{respuestaCuatro: "Cinturón", puntuacionCuatro: 6},
+				{respuestaCinco: "Gorras", puntuacionCinco: 3}
 			]
 		},
 				{
-			titulo: "Menciona una herramienta que usan los Exploradores del Rey",
+			titulo: "Tareas que nadie quiere hacer en un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Lavar trastes", puntuacionUno: 50},
+				{respuestaDos: "Lavar baños", puntuacionDos: 20},
+				{respuestaTres: "Hacer guardia", puntuacionTres: 15},
+				{respuestaCuatro: "Recoger basura", puntuacionCuatro: 10},
+				{respuestaCinco: "Buscar leña", puntuacionCinco: 5}
 			]
 		},
 				{
-			titulo: "Menciona una razón por la que llegas tarde a la reunión de exploradores del Rey",
+			titulo: "Persnoaje bíblico del antiguo testamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
+				{respuestaUno: "Moises", puntuacionUno: 51},
+				{respuestaDos: "Noé", puntuacionDos: 19},
+				{respuestaTres: "David", puntuacionTres: 15},
+				{respuestaCuatro: "Adán", puntuacionCuatro: 9},
+				{respuestaCinco: "Abraham", puntuacionCinco: 6}
 			]
 		},
 				{
-			titulo: "Menciona una comida que dan en los campamentos",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona un libro de la biblía más conocido",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona un objeto que no debe faltar cuando vas a un campamento",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona una actividad típica de los exploradores del Rey",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona un milagro de Jesús",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Cristianismo", puntuacionUno: 33},
-				{respuestaDos: "Catolismo", puntuacionDos: 24},
-				{respuestaTres: "Hinduismo", puntuacionTres: 15},
-				{respuestaCuatro: "Budismo", puntuacionCuatro: 6},
-				{respuestaCinco: "Sin afiliación religiosa", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Menciona un punto rojo",
+			titulo: "¿Qué pierdes normalmente en un campamento?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Cristianismo", puntuacionUno: 33},
