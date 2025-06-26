@@ -51,6 +51,7 @@
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Linterna", puntuacionDos: 19},
+				{respuestaDos: "Agua", puntuacionDos: 30},
 				{respuestaTres: "Comida", puntuacionTres: 9},
 				{respuestaCuatro: "Machete", puntuacionCuatro: 8},
 				{respuestaCinco: "Papel de baño", puntuacionCinco: 3}
@@ -295,7 +296,7 @@
 				{respuestaDos: "Servicio", puntuacionDos: 29},
 				{respuestaTres: "Intercesión", puntuacionTres: 18},
 				{respuestaCuatro: "Ujier", puntuacionCuatro: 10},
-				{respuestaCinco: "-----", puntuacionCinco: 6}
+				{respuestaCinco: "Sin respuestas", puntuacionCinco: 6}
 			]
 		},
 		{
