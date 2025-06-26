@@ -3,7 +3,7 @@
 	
 	const preguntas = [
 		{
-			titulo: "Punto del emblema que es más popular",
+			titulo: "Puntos azules más populares",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Alerta", puntuacionUno: 39},
@@ -14,7 +14,7 @@
 			]
 		},
 		{
-			titulo: "Qué anima a un destacamento",
+			titulo: "¿Cuál es la meta de los Exploradores del Rey?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Servir a Dios", puntuacionUno: 49},
@@ -25,7 +25,7 @@
 			]
 		},
 		{
-			titulo: "Qué es lo que más disfrutas de un campamento",
+			titulo: "Qué es lo que más te gusta de exploradores del Rey",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Convivencia", puntuacionUno: 53},
@@ -36,7 +36,7 @@
 			]
 		},
 		{
-			titulo: "Qué actividades hacen más en tu destacamento durante un campamento",
+			titulo: "Qué actividades hacen durante un campamento",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Fogata", puntuacionUno: 38},
@@ -47,14 +47,13 @@
 			]
 		},
 				{
-			titulo: "Qué herramientas llevas a un campamento para cortar",
+			titulo: "Qué objetos llevas a un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Navaja", puntuacionUno: 61},
-				{respuestaDos: "cuchillo", puntuacionDos: 19},
-				{respuestaTres: "Hacha", puntuacionTres: 9},
+				{respuestaUno: "Linterna", puntuacionDos: 19},
+				{respuestaTres: "Comida", puntuacionTres: 9},
 				{respuestaCuatro: "Machete", puntuacionCuatro: 8},
-				{respuestaCinco: "Cierra", puntuacionCinco: 3}
+				{respuestaCinco: "Papel de baño", puntuacionCinco: 3}
 			]
 		},
 				{
@@ -65,18 +64,18 @@
 				{respuestaDos: "Bolsa para dormir", puntuacionDos: 29},
 				{respuestaTres: "Hamaca", puntuacionTres: 13},
 				{respuestaCuatro: "Colchón", puntuacionCuatro: 10},
-				{respuestaCinco: "Sobre el pasto", puntuacionCinco: 7}
+				{respuestaCinco: "Al aire libre", puntuacionCinco: 7}
 			]
 		},
 				{
-			titulo: "Qué compran más los exploradores",
+			titulo: "Cuando vas a una actividad con otros Exploradores, ¿qué cosas puedes comprar ahí?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Parches", puntuacionUno: 62},
 				{respuestaDos: "Gorras", puntuacionDos: 12},
 				{respuestaTres: "Playeras", puntuacionTres: 10},
-				{respuestaCuatro: "Herramientas", puntuacionCuatro: 9},
-				{respuestaCinco: "Recuerdos", puntuacionCinco: 7}
+				{respuestaCuatro: "Chalecos", puntuacionCuatro: 9},
+				{respuestaCinco: "Comida", puntuacionCinco: 7}
 			]
 		},
 				{
@@ -102,7 +101,7 @@
 			]
 		},
 				{
-			titulo: "Elementos u objetos que se utilizan en la ceremonia de colores",
+			titulo: "Objetos que se utilizan en la ceremonia de colores",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Bandera de Exploradores", puntuacionUno: 33},
@@ -113,7 +112,7 @@
 			]
 		},
 				{
-			titulo: "Menciona un libro de la Biblia más conocido por los Exploradores del Rey",
+			titulo: "Menciona un libro de la Biblia más conocido",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Salmos", puntuacionUno: 40},
@@ -124,11 +123,11 @@
 			]
 		},
 				{
-			titulo: "Prenda del uniforme de los Exploradores del Rey",
+			titulo: "Partes del uniforme de un Explorador del Rey",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Chaleco", puntuacionUno: 62},
-				{respuestaDos: "Camisa utilitaria", puntuacionDos: 20},
+				{respuestaDos: "Camisa blanca", puntuacionDos: 20},
 				{respuestaTres: "Corbata bolo", puntuacionTres: 9},
 				{respuestaCuatro: "Cinturón", puntuacionCuatro: 6},
 				{respuestaCinco: "Gorras", puntuacionCinco: 3}
@@ -185,12 +184,12 @@
 				{respuestaUno: "Platicas", puntuacionUno: 64},
 				{respuestaDos: "Jugar", puntuacionDos: 14},
 				{respuestaTres: "Orar", puntuacionTres: 10},
-				{respuestaCuatro: "Ayunar", puntuacionCuatro: 8},
+				{respuestaCuatro: "Comer", puntuacionCuatro: 8},
 				{respuestaCinco: "Guardia", puntuacionCinco: 4}
 			]
 		},
 						{
-			titulo: "¿Qué objeto es obligatorio llevar a un campamento?",
+			titulo: "¿Qué objeto es muy necesario llevar a un campamento?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Biblia", puntuacionUno: 59},
@@ -201,14 +200,14 @@
 			]
 		},
 								{
-			titulo: "Alimento o bebida que no debe faltar en un campamento",
+			titulo: "Bebida que no debe faltar en un campamento",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Agua", puntuacionUno: 62},
 				{respuestaDos: "Coca cola", puntuacionDos: 20},
 				{respuestaTres: "Café", puntuacionTres: 9},
 				{respuestaCuatro: "Horchata", puntuacionCuatro: 6},
-				{respuestaCinco: "Huevo", puntuacionCinco: 3}
+				{respuestaCinco: "Té", puntuacionCinco: 3}
 			]
 		},
 								{
@@ -289,14 +288,14 @@
 			]
 		},
 		{
-			titulo: "En qué se desempeña más un Explorador del Rey en un grupo de alabanza",
+			titulo: "En qué otras áreas puede ayudar un Explorador del Rey",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Guitarra", puntuacionUno: 37},
-				{respuestaDos: "Vocalista", puntuacionDos: 29},
-				{respuestaTres: "Batería", puntuacionTres: 18},
-				{respuestaCuatro: "Teclado", puntuacionCuatro: 10},
-				{respuestaCinco: "Bajo", puntuacionCinco: 6}
+				{respuestaUno: "Alabanza", puntuacionUno: 37},
+				{respuestaDos: "Servicio", puntuacionDos: 29},
+				{respuestaTres: "Intercesión", puntuacionTres: 18},
+				{respuestaCuatro: "Ujier", puntuacionCuatro: 10},
+				{respuestaCinco: "-----", puntuacionCinco: 6}
 			]
 		},
 		{
