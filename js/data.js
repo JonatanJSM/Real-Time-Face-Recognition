@@ -7,14 +7,14 @@
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Alerta", puntuacionUno: 39},
-				{respuestaDos: "Físico", puntuacionDos: 23},
+				{respuestaDos: "Valiente", puntuacionDos: 23},
 				{respuestaTres: "Espiritual", puntuacionTres: 18},
-				{respuestaCuatro: "Mental", puntuacionCuatro: 13},
+				{respuestaCuatro: "Honrado", puntuacionCuatro: 13},
 				{respuestaCinco: "Limpio", puntuacionCinco: 7}
 			]
 		},
 		{
-			titulo: "¿Cuál es la meta de los Exploradores del Rey?",
+			titulo: "¿Cuál es una actividad de los Exploradores del Rey?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Servir a Dios", puntuacionUno: 49},
@@ -40,8 +40,8 @@
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Fogata", puntuacionUno: 38},
-				{respuestaDos: "Competencias", puntuacionDos: 30},
-				{respuestaTres: "Jugar", puntuacionTres: 15},
+				{respuestaDos: "Juegos", puntuacionDos: 30},
+				{respuestaTres: "Buscar leña", puntuacionTres: 15},
 				{respuestaCuatro: "Comer", puntuacionCuatro: 10},
 				{respuestaCinco: "Contar anéctodas", puntuacionCinco: 7}
 			]
@@ -50,26 +50,26 @@
 			titulo: "Qué objetos llevas a un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Linterna", puntuacionDos: 19},
+				{respuestaUno: "Biblia", puntuacionUno: 19},
 				{respuestaDos: "Agua", puntuacionDos: 30},
 				{respuestaTres: "Comida", puntuacionTres: 9},
-				{respuestaCuatro: "Machete", puntuacionCuatro: 8},
+				{respuestaCuatro: "Linterna", puntuacionCuatro: 8},
 				{respuestaCinco: "Papel de baño", puntuacionCinco: 3}
 			]
 		},
-				{
-			titulo: "Durante un campamento, en dónde es más común dormir",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Casa de campaña", puntuacionUno: 41},
-				{respuestaDos: "Bolsa para dormir", puntuacionDos: 29},
-				{respuestaTres: "Hamaca", puntuacionTres: 13},
-				{respuestaCuatro: "Colchón", puntuacionCuatro: 10},
-				{respuestaCinco: "Al aire libre", puntuacionCinco: 7}
-			]
+			{
+		titulo: "Durante un campamento, en dónde es más común dormir",
+		tipo: "normal",
+		respuestas: [
+			{respuestaUno: "Casa de campaña", puntuacionUno: 41},
+			{respuestaDos: "Bolsa para dormir", puntuacionDos: 29},
+			{respuestaTres: "Hamaca", puntuacionTres: 13},
+			{respuestaCuatro: "Colchón", puntuacionCuatro: 10},
+			{respuestaCinco: "Al aire libre", puntuacionCinco: 7}
+		]
 		},
 				{
-			titulo: "Cuando vas a una actividad con otros Exploradores, ¿qué cosas puedes comprar ahí?",
+			titulo: "Cuando vas a un evento de Exploradores, ¿qué cosas puedes comprar ahí?",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Parches", puntuacionUno: 62},
@@ -90,27 +90,16 @@
 				{respuestaCinco: "Mapache", puntuacionCinco: 4}
 			]
 		},
-				{
-			titulo: "Menciona un punto azul",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Alerta", puntuacionUno: 59},
-				{respuestaDos: "Limpio", puntuacionDos: 17},
-				{respuestaTres: "Espiritual", puntuacionTres: 12},
-				{respuestaCuatro: "Valiente", puntuacionCuatro: 10},
-				{respuestaCinco: "Honrado", puntuacionCinco: 5}
-			]
-		},
-				{
-			titulo: "Objetos que se utilizan en la ceremonia de colores",
-			tipo: "normal",
-			respuestas: [
-				{respuestaUno: "Bandera de Exploradores", puntuacionUno: 33},
-				{respuestaDos: "Velas", puntuacionDos: 23},
-				{respuestaTres: "Biblias", puntuacionTres: 19},
-				{respuestaCuatro: "Bandera cristiana", puntuacionCuatro: 14},
-				{respuestaCinco: "Lonas", puntuacionCinco: 11}
-			]
+			{
+		titulo: "Objetos que se utilizan en la ceremonia de colores",
+		tipo: "normal",
+		respuestas: [
+			{respuestaUno: "Bandera de Exploradores", puntuacionUno: 33},
+			{respuestaDos: "Velas", puntuacionDos: 23},
+			{respuestaTres: "Biblias", puntuacionTres: 19},
+			{respuestaCuatro: "Bandera cristiana", puntuacionCuatro: 14},
+			{respuestaCinco: "Lonas", puntuacionCinco: 11}
+		]
 		},
 				{
 			titulo: "Menciona un libro de la Biblia más conocido",
@@ -131,22 +120,22 @@
 				{respuestaDos: "Camisa blanca", puntuacionDos: 20},
 				{respuestaTres: "Corbata bolo", puntuacionTres: 9},
 				{respuestaCuatro: "Cinturón", puntuacionCuatro: 6},
-				{respuestaCinco: "Gorras", puntuacionCinco: 3}
+				{respuestaCinco: "Parches", puntuacionCinco: 3}
 			]
 		},
 				{
 			titulo: "Tareas que nadie quiere hacer en un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Lavar trastes", puntuacionUno: 50},
+				{respuestaUno: "Poner casa de campaña", puntuacionUno: 50},
 				{respuestaDos: "Lavar baños", puntuacionDos: 20},
-				{respuestaTres: "Hacer guardia", puntuacionTres: 15},
+				{respuestaTres: "Cocinar", puntuacionTres: 15},
 				{respuestaCuatro: "Recoger basura", puntuacionCuatro: 10},
 				{respuestaCinco: "Buscar leña", puntuacionCinco: 5}
 			]
 		},
 				{
-			titulo: "Persnoaje bíblico del antiguo testamento",
+			titulo: "Personaje bíblico del antiguo testamento",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Moises", puntuacionUno: 51},
@@ -182,7 +171,7 @@
 			titulo: "Algo que haces en vez de dormir en un campamento",
 			tipo: "normal",
 			respuestas: [
-				{respuestaUno: "Platicas", puntuacionUno: 64},
+				{respuestaUno: "Platicar", puntuacionUno: 64},
 				{respuestaDos: "Jugar", puntuacionDos: 14},
 				{respuestaTres: "Orar", puntuacionTres: 10},
 				{respuestaCuatro: "Comer", puntuacionCuatro: 8},
@@ -278,7 +267,7 @@
 			]
 		},
 		{
-			titulo: "Menciona una milagro de Jesús",
+			titulo: "Menciona un milagro de Jesús",
 			tipo: "normal",
 			respuestas: [
 				{respuestaUno: "Convertir el agua en vino", puntuacionUno: 59},
@@ -343,6 +332,17 @@
 				{respuestaTres: "Silencio", puntuacionTres: 12},
 				{respuestaCuatro: "Ya me voy a aprender la consigna", puntuacionCuatro: 9},
 				{respuestaCinco: "¡Sí señor!", puntuacionCinco: 5}
+			]
+		},
+		{
+			titulo: "Formas cariñosas cristianas de decirle a tu novio o novia",
+			tipo: "normal",
+			respuestas: [
+				{respuestaUno: "Mi idonea/o", puntuacionUno: 37},
+				{respuestaDos: "Mi chiquisierva/o", puntuacionDos: 29},
+				{respuestaTres: "Mi Filesta/o", puntuacionTres: 18},
+				{respuestaCuatro: "Mi amada/o", puntuacionCuatro: 10},
+				{respuestaCinco: "Mi tierra prometida", puntuacionCinco: 6}
 			]
 		}
 	]
