@@ -152,28 +152,23 @@
 <script>
 const grupos = [
   { nombre: "Joyitas", valor: 1 },
-  { nombre: "Corderitos", valor: 1 },
-  { nombre: "Amigos 1", valor: 1 },
+  // { nombre: "Corderitos", valor: 1 },
+  // { nombre: "Amigos 1", valor: 1 },
   { nombre: "Amigos 2", valor: 1 },
-  { nombre: "Discípulos 1", valor: 1 },
-  { nombre: "Discípulos 2", valor: 1 },
-  { nombre: "Mensajeros", valor: 1 },
-  { nombre: "Generación de vida", valor: 1 },
-  { nombre: "Ciudadanos", valor: 1 },
+  // { nombre: "Discípulos 1", valor: 1 },
+  // { nombre: "Discípulos 2", valor: 1 },
 ];
 
-
+// Ciudadanos, mensajeros, generacion de vida
+// 
 
 const coloresGrupo = {
   "Joyitas": "#f1c40f",
-  "Corderitos": "#3498db",
-  "Amigos 1": "#8e44ad",
+  // "Corderitos": "#3498db",
+  // "Amigos 1": "#8e44ad",
   "Amigos 2": "#2ecc71",
-  "Discípulos 1": "#e67e22",
-  "Discípulos 2": "#e74c3c",
-  "Mensajeros": "#95a5a6",
-  "Generación de vida": "#f1c40f",
-  "Ciudadanos": "#3498db",
+  // "Discípulos 1": "#e67e22",
+  // "Discípulos 2": "#e74c3c",
 };
 
 const tabla = document.getElementById("tabla");
@@ -245,7 +240,7 @@ function actualizarContenido() {
 
     el._refs.numero.innerText = index + 1;
     gsap.to(el._refs.barra, {
-      width: (grupo.valor / 650) * 100 + "%",
+      width: (grupo.valor / 200) * 100 + "%",
       duration: 1.5,
       ease: "power2.out"
     });
@@ -277,9 +272,16 @@ document.addEventListener("click", () => {
   audio.play().catch(e => console.warn("Primera reproducción falló:", e));
 });
 
+// Ciudadanos, mensajeros, generacion de vida
+// 
+
 setTimeout(() => {
-  grupos.find(g => g.nombre === "Ciudadanos").valor = 700;
-  grupos.find(g => g.nombre === "Joyitas").valor = 510;
+  grupos.find(g => g.nombre === "Joyitas").valor = 140;
+  // grupos.find(g => g.nombre === "Corderitos").valor = 30;
+  // grupos.find(g => g.nombre === "Amigos 1").valor = 34;
+  grupos.find(g => g.nombre === "Amigos 2").valor = 15;
+  // grupos.find(g => g.nombre === "Discípulos 1").valor = 52.6;
+  // grupos.find(g => g.nombre === "Discípulos 2").valor = 20.5;
   actualizarContenido();
 }, 4000);
 </script>

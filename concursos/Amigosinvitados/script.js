@@ -1,9 +1,14 @@
 const grupos = [
   { nombre: "Inicio", monedas: 0 },
-  { nombre: "Grupo 2", monedas: 40 },
-  { nombre: "Grupo 3", monedas: 9 },
-  { nombre: "Grupo 4", monedas: 11 },
-  { nombre: "Grupo 5", monedas: 12 }
+  { nombre: "Ciudadanos", monedas: 40 },
+  { nombre: "Joyitas", monedas: 9 },
+  { nombre: "Corderitos", monedas: 11 },
+  { nombre: "Amigos 1", monedas: 12 },
+  { nombre: "Amigos 2", monedas: 13 },
+  { nombre: "Discípulos 1", monedas: 14 },
+  { nombre: "Discípulos 2", monedas: 15 },
+  { nombre: "Mensajeros", monedas: 16 },
+  { nombre: "Generación de vida", monedas: 17 }
 ];
 
 const posiciones = [
